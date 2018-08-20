@@ -13,13 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
-        let splitViewController = window!.rootViewController as! UISplitViewController
-        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-        splitViewController.delegate = self
+        
+        self.createAndConfigureSplitView(window: self.window, delgate: self)
+        
+        self.applyNavigationbarPreferences()
+
         return true
     }
 
@@ -45,17 +46,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    // MARK: - Split view
 
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
-        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
-            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-            return true
+}
+
+//MARK: - SplitView Controller
+extension AppDelegate
+{
+    ///
+    /// create And Configure A SplitView Controller
+    ///
+    @discardableResult
+    fileprivate func createAndConfigureSplitView(window:UIWindow?,delgate:UISplitViewControllerDelegate) -> UISplitViewController?{
+        // Override point for customization after application launch.
+        
+        // get the splitViewController
+        let splitViewController = (window?.rootViewController) as? UISplitViewController
+        
+        // sanity check
+        guard let viewControllersCount = splitViewController?.viewControllers.count else {
+            return nil
         }
-        return false
+        guard viewControllersCount > 0 else {
+            return nil
+        }
+        
+        // get the navigationController
+        let navigationController =
+            (splitViewController?.viewControllers[viewControllersCount - 1]) as? UINavigationController
+        
+        // get the master view Controller
+        navigationController?.topViewController?.navigationItem.leftBarButtonItem =
+            splitViewController?.displayModeButtonItem
+        
+        // assign delegate
+        splitViewController?.delegate = delgate
+        
+        return splitViewController
+    }
+    
+    // MARK: - Split view
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
+   
+        // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+       
+        return true
     }
 
 }
 
+//MARK: - NavigationbarPreferences
+extension AppDelegate
+{
+    fileprivate func applyNavigationbarPreferences() {
+        // set navigation bar appearance preferencres
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes([NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white], for: UIControlState.normal)
+        
+        UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self]).tintColor =
+            UIColor.white
+    }
+}

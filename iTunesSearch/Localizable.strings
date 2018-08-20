@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  iTunesSearch
+
+  Created by Maddiee on 19/08/18.
+  Copyright © 2018 Maddiee. All rights reserved.
+*/
+
+
+"trackName" = "Track Name";
+"artistName" = "Artist Name";
+"collectionName" = "Album Name";
+"trackPrice" = "Track Price";
+"releaseDate" = "Release Date";
+"mainNavBarTitle" = "iTunes Search";
+"detailsNavBarTitle" = "iTunes Search Details";
