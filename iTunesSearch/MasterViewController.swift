@@ -14,6 +14,7 @@ enum Identifer {
     static let masterCellAltRight = "MasterCellAltRight"
     static let masterCellAltLeft = "MasterCellAltLeft"
     static let msterCellAltRight1 = "MasterCellAltRight1"
+    static let masterCellAltRightTwitter = "MasterCellAltRightTwitter"
 }
 
 class MasterViewController: UITableViewController {
@@ -102,7 +103,7 @@ class MasterViewController: UITableViewController {
         }
         else
         {
-            cell = tableView.dequeueReusableCell(withIdentifier: Identifer.msterCellAltRight1, for: indexPath) as? SearchResultsTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: Identifer.masterCellAltRightTwitter, for: indexPath) as? SearchResultsTableViewCell
         }
     
         let object = slice[indexPath.row]

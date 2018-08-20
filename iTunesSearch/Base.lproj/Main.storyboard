@@ -324,8 +324,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="244.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="albumplaceholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-Th-c1o">
-                                            <rect key="frame" x="16" y="16" width="120" height="213.5"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="albumplaceholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-Th-c1o">
+                                            <rect key="frame" x="16" y="-252.5" width="120" height="750.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="Crn-jy-O9g"/>
                                                 <constraint firstAttribute="height" priority="750" constant="120" id="MWC-sJ-vpu"/>
@@ -368,6 +368,63 @@
                                     <outlet property="subtitleTextLabel" destination="qF1-jl-s7u" id="ZoI-5K-pMd"/>
                                     <outlet property="titleTextLabel" destination="yh0-p8-bUP" id="0i9-1G-Wbz"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="TT0-vW-d5n"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MasterCellAltRightTwitter" rowHeight="245" id="I4u-fh-uBB" customClass="SearchResultsTableViewCell" customModule="iTunesSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="973" width="375" height="245"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I4u-fh-uBB" id="3Vz-Es-Rau">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="244.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="albumplaceholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKZ-xA-Z9J">
+                                            <rect key="frame" x="16" y="16" width="64" height="212.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="750" constant="64" id="AhL-hr-kXU"/>
+                                                <constraint firstAttribute="width" constant="64" id="kVW-Yh-SIG"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-XP-mTj">
+                                            <rect key="frame" x="96" y="70.5" width="263" height="103.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="LOVE IS ALL AROUND YOU" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1w-FJ-Kqj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="263" height="72"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                    <color key="textColor" red="0.20784313730000001" green="0.27450980390000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="999" text="Mark Antonyj" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAl-YN-ZS2">
+                                                    <rect key="frame" x="0.0" y="72" width="263" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.098039215690000001" green="0.63137254899999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="MBn-XP-mTj" firstAttribute="centerY" secondItem="3Vz-Es-Rau" secondAttribute="centerY" id="H3s-qH-EgV"/>
+                                        <constraint firstItem="sKZ-xA-Z9J" firstAttribute="leading" secondItem="3Vz-Es-Rau" secondAttribute="leadingMargin" constant="8" id="OAp-Zc-6mu"/>
+                                        <constraint firstItem="sKZ-xA-Z9J" firstAttribute="centerY" secondItem="3Vz-Es-Rau" secondAttribute="centerY" id="OrK-kW-fWT"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="MBn-XP-mTj" secondAttribute="bottom" constant="8" id="Oyx-eX-HoL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="sKZ-xA-Z9J" secondAttribute="bottom" priority="749" constant="8" id="Qns-mY-Nqs"/>
+                                        <constraint firstItem="MBn-XP-mTj" firstAttribute="leading" secondItem="sKZ-xA-Z9J" secondAttribute="trailing" constant="16" id="dDv-CP-Rdo"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="MBn-XP-mTj" secondAttribute="trailing" constant="8" id="ify-0i-qq9"/>
+                                        <constraint firstItem="MBn-XP-mTj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Vz-Es-Rau" secondAttribute="topMargin" constant="8" id="ilY-7g-678"/>
+                                        <constraint firstItem="sKZ-xA-Z9J" firstAttribute="top" secondItem="3Vz-Es-Rau" secondAttribute="topMargin" constant="8" id="kao-8k-0B2"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="OrK-kW-fWT"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="albumArtImageView" destination="sKZ-xA-Z9J" id="W7V-c6-kdC"/>
+                                    <outlet property="subtitleTextLabel" destination="LAl-YN-ZS2" id="Bqv-ZB-RHb"/>
+                                    <outlet property="titleTextLabel" destination="m1w-FJ-Kqj" id="4bV-K7-aj6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
