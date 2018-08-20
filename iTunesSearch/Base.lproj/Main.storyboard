@@ -355,10 +355,10 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="g4M-JI-6Zb" secondAttribute="trailing" constant="8" id="Dlk-b8-zg2"/>
                                         <constraint firstItem="Ckb-Th-c1o" firstAttribute="leading" secondItem="EGG-P1-cbO" secondAttribute="leadingMargin" constant="8" id="DxX-4v-ZyO"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Ckb-Th-c1o" secondAttribute="bottom" priority="749" constant="8" id="GtW-Uh-TGv"/>
-                                        <constraint firstItem="g4M-JI-6Zb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EGG-P1-cbO" secondAttribute="topMargin" priority="750" constant="8" id="Neg-Wk-5w3"/>
+                                        <constraint firstItem="g4M-JI-6Zb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EGG-P1-cbO" secondAttribute="topMargin" constant="8" id="Neg-Wk-5w3"/>
                                         <constraint firstItem="g4M-JI-6Zb" firstAttribute="centerY" secondItem="EGG-P1-cbO" secondAttribute="centerY" id="RVM-hd-ZTW"/>
                                         <constraint firstItem="Ckb-Th-c1o" firstAttribute="centerY" secondItem="EGG-P1-cbO" secondAttribute="centerY" id="ghk-Rw-uLY"/>
-                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="g4M-JI-6Zb" secondAttribute="bottom" priority="750" constant="8" id="gzG-KE-vrD"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="g4M-JI-6Zb" secondAttribute="bottom" constant="8" id="gzG-KE-vrD"/>
                                         <constraint firstItem="Ckb-Th-c1o" firstAttribute="top" secondItem="EGG-P1-cbO" secondAttribute="topMargin" priority="749" constant="8" id="hVx-F7-ASg"/>
                                     </constraints>
                                 </tableViewCellContentView>
